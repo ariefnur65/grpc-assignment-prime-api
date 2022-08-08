@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package math;
+
+option java_package = "com.axorean.grpc.math";
+option java_multiple_files = true;
+
+message PrimeRequest {
+  int64 targetNumber = 1;
+}
+
+message PrimeResponse {
+  int64 primeNumber = 1;
+}

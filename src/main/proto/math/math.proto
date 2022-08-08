@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package math;
+
+option java_package = "com.axorean.grpc.math";
+option java_multiple_files = true;
+
+import "math/prime.proto";
+
+service MathService {
+  rpc findAllPrime(PrimeRequest) returns (stream PrimeResponse);
+}
